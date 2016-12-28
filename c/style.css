@@ -52,7 +52,7 @@ html, body {
 
 .last-name {
   bottom: 0;
-  transform: translateY(50%);
+  transform: translateY(47%);
 }
 
 /* contact */
@@ -108,8 +108,8 @@ html, body {
 /* media queries */
 /* breakpoints cribbed from http://purecss.io/grids */
 
-/* ≥ 640px */
-@media screen and (max-width: 40em) and (orientation: landscape) {
+/* ≥ 568px */
+@media screen and (max-width: 35.5em) and (orientation: landscape) {
   .first-name {
     transform: translateY(-65%);
   }
@@ -156,11 +156,11 @@ html, body {
   }
 
   .first-name {
-    transform: translateY(-60%);
+    transform: translateY(-55%);
   }
 
   .last-name {
-    transform: translateY(55%);
+    transform: translateY(48%);
   }
 
   .contact {
