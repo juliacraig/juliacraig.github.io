@@ -39,19 +39,27 @@ html, body {
 
 .page-name {
   text-align: center;
+  cursor: default;
+
+  /* THE SIZE OF THE BIG PAGE TITLES */
   font-size: 6.5em;
   font-weight: 700;
+
+  /* THE COLOUR OF THE BIG PAGE TITLES */
   color: #D9D9D9;
-  cursor: default;
 }
 
 .page-name-top {
   top: 0;
+
+  /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
   transform: translateY(-55%);
 }
 
 .page-name-bottom {
   bottom: 0;
+
+  /* THE AMOUNT OF THE BOTTOM WORD TO CUT OFF */
   transform: translateY(47%);
 }
 
@@ -61,6 +69,8 @@ html, body {
   position: absolute;
   top: 48%;
   transform: translateY(-50%);
+
+  /* THE SIZE OF THE LINKS IN THE MIDDLE */
   font-size: 1.1em;
 }
 
@@ -72,10 +82,16 @@ html, body {
 .content a {
   display: inline-block;
   width: 100%;
-  color: black;
   text-decoration: none;
   border: 2px solid transparent;
+
+  /* THE COLOUR OF THE LINKS IN THE MIDDLE */
+  color: black;
+
+  /* HOW ROUNDED THE CORNERS OF THE OUTLINE RECTANGLE ARE */
   border-radius: 2px;
+
+  /* HOW MUCH SPACE BETWEEN THE LINK TEXT AND THE OUTLINE */
   padding: 12px;
 }
 
@@ -84,6 +100,9 @@ html, body {
     outline: 0;
 }
 
+/* THE COLOUR OF THE EMAIL LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
+/* https://css-tricks.com/rgba-browser-support/ */
+/* http://hex2rgba.devoth.com/ */
 .content .email:hover,
 .content .email:focus {
   color: rgb(242, 173, 55);
@@ -91,6 +110,8 @@ html, body {
   border-color: rgba(242, 173, 55, .25);
 }
 
+/* THE COLOUR OF THE TWITTER LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
+/* https://brandcolors.net/ */
 .content .twitter:hover,
 .content .twitter:focus {
   color: rgb(29, 161, 242);
@@ -98,6 +119,7 @@ html, body {
   border-color: rgba(29, 161, 242, .25);
 }
 
+/* THE COLOUR OF THE FACEBOOK LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
 .content .facebook:hover,
 .content .facebook:focus {
   color: rgb(59, 89, 152);
@@ -108,6 +130,7 @@ html, body {
 /* media queries */
 /* breakpoints cribbed from http://purecss.io/grids */
 
+/* SCREENS BIGGER THAN 568px (bigger than an iphone), WHEN IN LANDSCAPE MODE */
 /* ≥ 568px */
 @media screen and (max-width: 35.5em) and (orientation: landscape) {
   .page-name-top {
@@ -119,6 +142,7 @@ html, body {
   }
 }
 
+/* SCREENS BIGGER THAN 568px (bigger than an iphone) */
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
   .page-name {
@@ -134,6 +158,7 @@ html, body {
   }
 }
 
+/* SCREENS BIGGER THAN 568px (bigger than an mom's tablet) */
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
   .page-name {
@@ -149,6 +174,7 @@ html, body {
   }
 }
 
+/* SCREENS BIGGER THAN 568px (usually, laptops and desktops) */
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .page-name {
@@ -168,5 +194,6 @@ html, body {
   }
 }
 
+/* SCREENS BIGGER THAN 568px (really super high definition monitors) */
 /* 1280px */
 @media screen and (min-width: 80em) {}
