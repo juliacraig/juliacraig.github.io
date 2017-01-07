@@ -26,9 +26,9 @@ html, body {
                                   not supported by any browser */
 }
 
-/* name + contact */
+/* page name + content */
 
-.name, .contact {
+.page-name, .content {
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -37,7 +37,7 @@ html, body {
 
 /* name */
 
-.name {
+.page-name {
   text-align: center;
   font-size: 6.5em;
   font-weight: 700;
@@ -45,31 +45,31 @@ html, body {
   cursor: default;
 }
 
-.first-name {
+.page-name-top {
   top: 0;
   transform: translateY(-55%);
 }
 
-.last-name {
+.page-name-bottom {
   bottom: 0;
   transform: translateY(47%);
 }
 
-/* contact */
+/* content */
 
-.contact {
+.content {
   position: absolute;
   top: 48%;
   transform: translateY(-50%);
   font-size: 1.1em;
 }
 
-.contact .container {
+.content .container {
   display: inline-block;
   width: 90%;
 }
 
-.contact a {
+.content a {
   display: inline-block;
   width: 100%;
   color: black;
@@ -79,27 +79,27 @@ html, body {
   padding: 12px;
 }
 
-.contact a:hover,
-.contact a:focus {
+.content a:hover,
+.content a:focus {
     outline: 0;
 }
 
-.contact .email:hover,
-.contact .email:focus {
+.content .email:hover,
+.content .email:focus {
   color: rgb(242, 173, 55);
   border-color: rgb(242, 173, 55);
   border-color: rgba(242, 173, 55, .25);
 }
 
-.contact .twitter:hover,
-.contact .twitter:focus {
+.content .twitter:hover,
+.content .twitter:focus {
   color: rgb(29, 161, 242);
   border-color: rgb(29, 161, 242);
   border-color: rgba(29, 161, 242, .25);
 }
 
-.contact .facebook:hover,
-.contact .facebook:focus {
+.content .facebook:hover,
+.content .facebook:focus {
   color: rgb(59, 89, 152);
   border-color: rgb(59, 89, 152);
   border-color: rgba(59, 89, 152, .25);
@@ -110,60 +110,60 @@ html, body {
 
 /* ≥ 568px */
 @media screen and (max-width: 35.5em) and (orientation: landscape) {
-  .first-name {
+  .page-name-top {
     transform: translateY(-65%);
   }
 
-  .last-name {
+  .page-name-bottom {
     transform: translateY(60%);
   }
 }
 
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
-  .name {
+  .page-name {
     font-size: 9em;
   }
 
-  .contact .container {
+  .content .container {
     width: 330px;
   }
 
-  .contact a {
+  .content a {
     width: 33%;
   }
 }
 
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
-  .name {
+  .page-name {
     font-size: 12em;
   }
 
-  .contact {
+  .content {
     font-size: 1.15em;
   }
 
-  .contact .container {
+  .content .container {
     width: 450px;
   }
 }
 
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
-  .name {
+  .page-name {
     font-size: 14em;
   }
 
-  .first-name {
+  .page-name-top {
     transform: translateY(-55%);
   }
 
-  .last-name {
+  .page-name-bottom {
     transform: translateY(48%);
   }
 
-  .contact {
+  .content {
     font-size: 1.20em;
   }
 }
