@@ -7,7 +7,6 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: 'Source Code Pro', monospace;
-    background-color: #0d333e;
 }
 
 /* utility classes */
@@ -127,6 +126,18 @@ html, body {
   border-color: rgba(59, 89, 152, .25);
 }
 
+/* page-specific styles */
+
+.index-page {
+  /* THE BACKGROUND COLOR OF THE HOME PAGE */
+  background-color: #0d333e;
+}
+
+.contact-page {
+  /* THE BACKGROUND COLOR OF THE CONTACT PAGE */
+  background-color: #f88379;
+}
+
 /* media queries */
 /* breakpoints cribbed from http://purecss.io/grids */
 
@@ -155,6 +166,22 @@ html, body {
 
   .content a {
     width: 33%;
+  }
+
+  /* page specific styles */
+  /* these rules only affect stuff on the "contact" page when the screen larger than a phone screen */
+
+  .contact-page .content {
+    text-align: left;
+  }
+
+  .contact-page .content .container {
+    width: 165px;
+    margin-left: 15%;
+  }
+
+  .contact-page .content a {
+    width: 100%;
   }
 }
 
