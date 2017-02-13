@@ -1,0 +1,17 @@
+.pics-page .content {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  outline: 1px transparent solid;
+}
+
+.subheading {
+  text-align: right;
+  border-bottom: 4px solid white;
+}
+
+.subheading h2 {
+  font-size: 3.5em;
+  margin: 0;
+  margin-bottom: -.3em;
+}

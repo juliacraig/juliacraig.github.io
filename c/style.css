@@ -88,6 +88,10 @@ html, body {
 
 /* content */
 
+.content--block {
+  margin-top: 9em;
+}
+
 .content--absolute {
   position: absolute;
   top: 48%;
