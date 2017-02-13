@@ -47,7 +47,7 @@ html, body {
 
 /* page name + content */
 
-.page-name, .content, footer {
+.page-name, .content--full-width, footer {
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -88,7 +88,7 @@ html, body {
 
 /* content */
 
-.content {
+.content--absolute {
   position: absolute;
   top: 48%;
   transform: translateY(-50%);
@@ -134,8 +134,8 @@ html, body {
 /* THE COLOUR OF THE EMAIL LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
 /* https://css-tricks.com/rgba-browser-support/ */
 /* http://hex2rgba.devoth.com/ */
-.content .link__email:hover,
-.content .link__email:focus {
+.container .link__email:hover,
+.container .link__email:focus {
   color: rgb(154, 28, 0);
   border-color: rgb(154, 28, 0);
   border-color: rgba(154, 28, 0, .25);
@@ -143,16 +143,16 @@ html, body {
 
 /* THE COLOUR OF THE TWITTER LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
 /* https://brandcolors.net/ */
-.content .link__twitter:hover,
-.content .link__twitter:focus {
+.container .link__twitter:hover,
+.container .link__twitter:focus {
   color: rgb(29, 161, 242);
   border-color: rgb(29, 161, 242);
   border-color: rgba(29, 161, 242, .25);
 }
 
 /* THE COLOUR OF THE FACEBOOK LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-.content .link__facebook:hover,
-.content .link__facebook:focus {
+.container .link__facebook:hover,
+.container .link__facebook:focus {
   color: rgb(59, 89, 152);
   border-color: rgb(59, 89, 152);
   border-color: rgba(59, 89, 152, .25);
