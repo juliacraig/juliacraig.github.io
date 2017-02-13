@@ -7,6 +7,8 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: 'Source Code Pro', monospace;
+    background-color: #FFC0B2;
+    color: white;
 }
 
 /* utility classes */
@@ -23,6 +25,21 @@ html, body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   not supported by any browser */
+}
+
+/*
+  Hide, but not for screenreaders
+  Source: https://github.com/alphagov/govuk_elements/blob/0fcc6998aea888586d4c94a54a18c61390ae73a1/public/sass/elements/_helpers.scss#L25
+*/
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 /* page name + content */
@@ -45,21 +62,25 @@ html, body {
   font-weight: 700;
 
   /* THE COLOUR OF THE BIG PAGE TITLES */
-  color: #D9D9D9;
+  color: #FFFFFF;
 }
 
-.page-name-top {
+.page-name--top {
   top: 0;
 
   /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
   transform: translateY(-55%);
 }
 
-.page-name-bottom {
+.page-name--bottom {
   bottom: 0;
 
   /* THE AMOUNT OF THE BOTTOM WORD TO CUT OFF */
   transform: translateY(47%);
+}
+
+.page-name:hover + .content--hover {
+  display: block;
 }
 
 /* content */
@@ -71,6 +92,12 @@ html, body {
 
   /* THE SIZE OF THE LINKS IN THE MIDDLE */
   font-size: 1.1em;
+}
+
+.content--hover {
+  display: none;
+  background-color: #FFC0B2;
+  z-index: 1;
 }
 
 .content .container {
@@ -102,25 +129,25 @@ html, body {
 /* THE COLOUR OF THE EMAIL LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
 /* https://css-tricks.com/rgba-browser-support/ */
 /* http://hex2rgba.devoth.com/ */
-.content .email:hover,
-.content .email:focus {
-  color: rgb(242, 173, 55);
-  border-color: rgb(242, 173, 55);
-  border-color: rgba(242, 173, 55, .25);
+.content .link__email:hover,
+.content .link__email:focus {
+  color: rgb(154, 28, 0);
+  border-color: rgb(154, 28, 0);
+  border-color: rgba(154, 28, 0, .25);
 }
 
 /* THE COLOUR OF THE TWITTER LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
 /* https://brandcolors.net/ */
-.content .twitter:hover,
-.content .twitter:focus {
+.content .link__twitter:hover,
+.content .link__twitter:focus {
   color: rgb(29, 161, 242);
   border-color: rgb(29, 161, 242);
   border-color: rgba(29, 161, 242, .25);
 }
 
 /* THE COLOUR OF THE FACEBOOK LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-.content .facebook:hover,
-.content .facebook:focus {
+.content .link__facebook:hover,
+.content .link__facebook:focus {
   color: rgb(59, 89, 152);
   border-color: rgb(59, 89, 152);
   border-color: rgba(59, 89, 152, .25);
@@ -130,12 +157,12 @@ html, body {
 
 .index-page {
   /* THE BACKGROUND COLOR OF THE HOME PAGE */
-  background-color: #0d333e;
+  /* background-color: #0d333e; */
 }
 
 .contact-page {
   /* THE BACKGROUND COLOR OF THE CONTACT PAGE */
-  background-color: #e27e1c;
+  /* background-color: #e27e1c; */
 }
 
 /* media queries */
@@ -166,22 +193,6 @@ html, body {
 
   .content a {
     width: 33%;
-  }
-
-  /* page specific styles */
-  /* these rules only affect stuff on the "contact" page when the screen larger than a phone screen */
-
-  .contact-page .content {
-    text-align: left;
-  }
-
-  .contact-page .content .container {
-    width: 165px;
-    margin-left: 15%;
-  }
-
-  .contact-page .content a {
-    width: 100%;
   }
 }
 
