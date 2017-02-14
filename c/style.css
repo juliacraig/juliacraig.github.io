@@ -14,6 +14,29 @@ p, a {
   font-size: 1.4em;
 }
 
+a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  border: 2px solid transparent;
+
+  /* THE COLOUR OF THE LINKS */
+  color: white;
+
+  /* HOW ROUNDED THE CORNERS OF THE OUTLINE RECTANGLE ARE */
+  border-radius: 2px;
+
+  /* HOW MUCH SPACE BETWEEN THE LINK TEXT AND THE OUTLINE */
+  padding: 12px;
+}
+
+/* THE COLOUR OF LINKS WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
+a:hover,
+a:focus {
+  border-color: white;
+  outline: 0;
+}
+
 /* utility classes */
 
 .overflow-hidden {
@@ -121,54 +144,6 @@ p, a {
   width: 90%;
 }
 
-.content a, footer a {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  border: 2px solid transparent;
-
-  /* THE COLOUR OF THE LINKS IN THE MIDDLE */
-  color: white;
-
-  /* HOW ROUNDED THE CORNERS OF THE OUTLINE RECTANGLE ARE */
-  border-radius: 2px;
-
-  /* HOW MUCH SPACE BETWEEN THE LINK TEXT AND THE OUTLINE */
-  padding: 12px;
-}
-
-.content a:hover,
-.content a:focus {
-    outline: 0;
-}
-
-/* THE COLOUR OF THE EMAIL LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-/* https://css-tricks.com/rgba-browser-support/ */
-/* http://hex2rgba.devoth.com/ */
-.container .link__email:hover,
-.container .link__email:focus {
-  color: rgb(154, 28, 0);
-  border-color: rgb(154, 28, 0);
-  border-color: rgba(154, 28, 0, .25);
-}
-
-/* THE COLOUR OF THE TWITTER LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-/* https://brandcolors.net/ */
-.container .link__twitter:hover,
-.container .link__twitter:focus {
-  color: rgb(29, 161, 242);
-  border-color: rgb(29, 161, 242);
-  border-color: rgba(29, 161, 242, .25);
-}
-
-/* THE COLOUR OF THE FACEBOOK LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-.container .link__facebook:hover,
-.container .link__facebook:focus {
-  color: rgb(59, 89, 152);
-  border-color: rgb(59, 89, 152);
-  border-color: rgba(59, 89, 152, .25);
-}
-
 /* back to home link */
 
 footer {
@@ -178,12 +153,6 @@ footer {
 
 footer a {
   width: 33%;
-}
-
-/* THE COLOUR OF THE BACK LINK WHEN HOVERED WITH A MOUSE OR FOCUSED WITH A KEYBOARD */
-.link__back:hover,
-.link__back:focus {
-  border-color: white;
 }
 
 /* page-specific styles */
@@ -221,7 +190,7 @@ footer a {
   }
 
   .content .container {
-    width: 330px;
+    width: 75%;
   }
 
   .content a {
@@ -237,7 +206,7 @@ footer a {
   }
 
   .content .container {
-    width: 450px;
+    width: 45%;
   }
 }
 
