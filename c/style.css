@@ -102,14 +102,14 @@ a:focus {
   top: 0;
 
   /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
-  transform: translateY(-55%);
+  transform: translateY(-50%);
 }
 
 .page-name--bottom {
   bottom: 0;
 
   /* THE AMOUNT OF THE BOTTOM WORD TO CUT OFF */
-  transform: translateY(47%);
+  transform: translateY(44%);
 }
 
 .page-name:hover + .content--hover {
@@ -119,7 +119,7 @@ a:focus {
 /* content */
 
 .content--block {
-  margin-top: 9em;
+  margin-top: 12em;
 }
 
 .content--absolute {
@@ -173,11 +173,11 @@ footer a {
 /* SCREENS BIGGER THAN 568px (bigger than an iphone), WHEN IN LANDSCAPE MODE */
 /* ≥ 568px */
 @media screen and (max-width: 35.5em) and (orientation: landscape) {
-  .page-name-top {
+  .page-name--top {
     transform: translateY(-65%);
   }
 
-  .page-name-bottom {
+  .page-name--bottom {
     transform: translateY(60%);
   }
 }
@@ -215,14 +215,6 @@ footer a {
 @media screen and (min-width: 64em) {
   .page-name {
     font-size: 14em;
-  }
-
-  .page-name-top {
-    transform: translateY(-55%);
-  }
-
-  .page-name-bottom {
-    transform: translateY(48%);
   }
 }
 
