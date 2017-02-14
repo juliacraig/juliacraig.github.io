@@ -8,9 +8,10 @@ html, body {
     font-family: 'Source Code Pro', monospace;
     background-color: #FFC0B2;
     color: white;
+}
 
-    /* THE SIZE OF THE LINKS IN THE MIDDLE */
-    font-size: 1.1em;
+p, a {
+  font-size: 1.4em;
 }
 
 /* utility classes */
@@ -54,6 +55,9 @@ html, body {
   width: 100%;
   display: inline-block;
   text-align: center;
+}
+
+.page-name, [class$="--absolute"] {
   position: absolute;
 }
 
@@ -168,9 +172,8 @@ html, body {
 /* back to home link */
 
 footer {
-  position: absolute;
-  top: 80%;
-  /* transform: translateY(-50%); */
+  bottom: 0;
+  padding-bottom: 2em;
 }
 
 footer a {
@@ -233,10 +236,6 @@ footer a {
     font-size: 12em;
   }
 
-  .content {
-    font-size: 1.15em;
-  }
-
   .content .container {
     width: 450px;
   }
@@ -255,10 +254,6 @@ footer a {
 
   .page-name-bottom {
     transform: translateY(48%);
-  }
-
-  .content {
-    font-size: 1.20em;
   }
 }
 
