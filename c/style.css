@@ -198,7 +198,7 @@ footer a {
   }
 }
 
-/* SCREENS BIGGER THAN 568px (bigger than an mom's tablet) */
+/* SCREENS BIGGER THAN 768px (bigger than an mom's tablet) */
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
   .page-name {
@@ -210,7 +210,7 @@ footer a {
   }
 }
 
-/* SCREENS BIGGER THAN 568px (usually, laptops and desktops) */
+/* SCREENS BIGGER THAN 1024px (usually, laptops and desktops) */
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .page-name {
@@ -218,6 +218,6 @@ footer a {
   }
 }
 
-/* SCREENS BIGGER THAN 568px (really super high definition monitors) */
+/* SCREENS BIGGER THAN 1280px (really super high definition monitors) */
 /* 1280px */
 @media screen and (min-width: 80em) {}
