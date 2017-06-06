@@ -1,3 +1,10 @@
+
+html, body {
+	
+    background-color: #0C2E38;
+}
+
+
 .pics-page .content {
   width: 80%;
   margin-left: 10%;
@@ -93,4 +100,5 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
   .content .container {
     width: 45%;
   }
+  
 }

@@ -6,7 +6,8 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: 'Source Code Pro', monospace;
-    background-color: #FFC0B2;
+	/* default */
+    background-color: lightgrey;
     color: white;
 }
 
@@ -87,6 +88,8 @@ a:focus {
 /* name */
 
 .page-name {
+	
+  z-index: 2;
   text-align: center;
   cursor: default;
 
@@ -113,7 +116,7 @@ a:focus {
 }
 
 .page-name:hover + .content--hover {
-  display: block;
+  display: inherit;
 }
 
 /* content */
@@ -130,13 +133,13 @@ a:focus {
 
 .content--hover {
   display: none;
-  background-color: #FFC0B2;
+  background-color: #3796B6;
   z-index: 1;
 }
 
 .content--hover p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 50em;
+  margin-bottom: 50em;
 }
 
 .content .container {
@@ -159,12 +162,12 @@ footer a {
 
 .index-page {
   /* THE BACKGROUND COLOR OF THE HOME PAGE */
-  /* background-color: #0d333e; */
+  background-color: #14647F;
 }
 
 .contact-page {
   /* THE BACKGROUND COLOR OF THE CONTACT PAGE */
-  /* background-color: #e27e1c; */
+  background-color: #61CEF4;
 }
 
 /* media queries */
