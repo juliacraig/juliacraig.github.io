@@ -48,6 +48,26 @@ a:focus {
   position: relative;
 }
 
+/* PULSING BACKGROUND COLOUR */
+.pulse {
+background: linear-gradient(124deg, #FF0000, #D43B1D, #E81D1D, #E8B71D, #E3E81D, #1de840);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 6s ease infinite;
+animation: rainbow 6s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
@@ -88,7 +108,6 @@ a:focus {
 /* name */
 
 .page-name {
-	
   z-index: 2;
   text-align: center;
   cursor: default;
@@ -105,14 +124,17 @@ a:focus {
   top: 0;
 
   /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
-  transform: translateY(-50%);
+  transform: translateY(-45%);
+}
+.page-name--top:hover {
+  border: white 2px solid;
 }
 
 .page-name--bottom {
   bottom: 0;
 
   /* THE AMOUNT OF THE BOTTOM WORD TO CUT OFF */
-  transform: translateY(44%);
+  transform: translateY(38%);
 }
 
 .page-name:hover + .content--hover {
@@ -133,7 +155,7 @@ a:focus {
 
 .content--hover {
   display: none;
-  background-color: #3796B6;
+  background-color: #D43B1D;
   z-index: 1;
 }
 
@@ -224,3 +246,4 @@ footer a {
 /* SCREENS BIGGER THAN 1280px (really super high definition monitors) */
 /* 1280px */
 @media screen and (min-width: 80em) {}
+
