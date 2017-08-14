@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-p, a {
+p, a, span {
   font-size: 1.4em;
   margin: 0;
 }
@@ -105,6 +105,22 @@ animation: rainbow 6s ease infinite;
   border: 0;
 }
 
+.hover-container > .invisible-on-hover {
+  visibility: visible;
+}
+
+.hover-container:hover > .invisible-on-hover {
+  visibility: hidden;
+}
+
+.hover-container > .visible-on-hover {
+  visibility: hidden;
+}
+
+.hover-container:hover > .visible-on-hover {
+  visibility: visible;
+}
+
 /* content + footer */
 
 .content--full-width, footer {
@@ -121,16 +137,17 @@ animation: rainbow 6s ease infinite;
   display: inline-block;
   z-index: 2;
   cursor: default;
+  width: 100%;
 
   /* THE SIZE OF THE BIG PAGE TITLES */
-  font-size: 6.5em;
+  font-size: 4em;
   font-weight: 700;
   line-height: 1;
 
   /* THE COLOUR OF THE BIG PAGE TITLES */
   color: #FFFFFF;
   /* THE COLOUR OF THE TEXT SHADOW */
-  text-shadow: .03em .03em 0 hotpink;
+  text-shadow: .04em .04em 0 hotpink;
 }
 
 .page-name--top {
@@ -138,10 +155,23 @@ animation: rainbow 6s ease infinite;
   transform: translateY(-45%);
 }
 
+.page-name--top span,
+.page-name--top a {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
+  transform: translateX(-50%) translateY(-45%);
+}
+
+.page-name--top a {
+  border: none;
+}
+
 .page-name--top:hover,
 .page-name--top:hover + .page-name--bottom {
   color: transparent;
-  text-shadow: .03em .03em 0 #FFFFFF;
+  text-shadow: .04em .04em 0 #FFFFFF;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: hotpink;
@@ -186,6 +216,7 @@ animation: rainbow 6s ease infinite;
 
 footer {
   bottom: 0;
+  left: 0;
   padding-bottom: 2em;
 }
 
@@ -224,7 +255,7 @@ footer a {
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
   .page-name {
-    font-size: 9em;
+    font-size: 7em;
   }
 
   .content .container {
@@ -241,7 +272,7 @@ footer a {
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
   .page-name {
-    font-size: 12em;
+    font-size: 9em;
   }
 
   .content .container {
@@ -253,7 +284,7 @@ footer a {
 /* ≥ 1024px */
 @media screen and (min-width: 64em) {
   .page-name {
-    font-size: 14em;
+    font-size: 10em;
   }
 }
 
