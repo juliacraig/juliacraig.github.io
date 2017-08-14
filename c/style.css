@@ -15,6 +15,10 @@ body {
   text-align: center;
 }
 
+header {
+  position: inherit;
+}
+
 p, a, span {
   font-size: 1.4em;
   margin: 0;
@@ -125,7 +129,7 @@ animation: rainbow 6s ease infinite;
 /* name */
 .page-name {
   display: inline-block;
-  z-index: 2;
+  z-index: 10;
   cursor: default;
   width: 100%;
 
@@ -161,6 +165,7 @@ animation: rainbow 6s ease infinite;
 }
 
 .page-name--top:hover,
+.page-name--top:hover > *,
 .page-name--top:hover + .page-name--bottom {
   color: transparent;
   text-shadow: .04em .04em 0 #FFFFFF;
@@ -180,6 +185,10 @@ animation: rainbow 6s ease infinite;
 
 /* content */
 
+.content {
+  z-index: 0;
+}
+
 .content--block {
   margin-top: 12em;
 }
@@ -193,7 +202,7 @@ animation: rainbow 6s ease infinite;
 .content--show-on-hover {
   display: none;
   background-color: #D43B1D;
-  z-index: 1;
+  z-index: 5;
 }
 
 .page-name--top:hover ~ main .content--show-on-hover {
