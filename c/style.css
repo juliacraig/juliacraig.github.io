@@ -144,6 +144,8 @@ animation: rainbow 6s ease infinite;
   font-weight: 700;
   line-height: 1;
 
+  text-transform: uppercase;
+
   /* THE COLOUR OF THE BIG PAGE TITLES */
   color: #FFFFFF;
   /* THE COLOUR OF THE TEXT SHADOW */
