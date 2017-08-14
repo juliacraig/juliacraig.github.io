@@ -80,16 +80,6 @@ animation: rainbow 6s ease infinite;
     100%{background-position:0% 82%}
 }
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-     -khtml-user-select: none; /* Konqueror */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  not supported by any browser */
-}
-
 /*
   Hide, but not for screenreaders
   Source: https://github.com/alphagov/govuk_elements/blob/0fcc6998aea888586d4c94a54a18c61390ae73a1/public/sass/elements/_helpers.scss#L25
@@ -231,6 +221,10 @@ footer a {
 .index-page {
   /* THE BACKGROUND COLOR OF THE HOME PAGE */
   background-color: #14647F;
+}
+
+.index-page .page-name--top:hover {
+  cursor: help;
 }
 
 .contact-page {
