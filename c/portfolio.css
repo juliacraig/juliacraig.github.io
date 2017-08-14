@@ -18,7 +18,7 @@ html, body {
 }
 
 .subheading h2 {
-  font-size: 5.75em;
+  font-size: 3em;
   margin: 0;
   margin-bottom: -.3em;
 }
@@ -45,7 +45,7 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
 
 .pics__row div span:after {
   color: white;
-  font-size: 1.05em;
+  font-size: .85em;
   content: attr(title);
   position: relative;
   top: .5em;
@@ -62,7 +62,19 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
   border-bottom: 2px solid white;
 }
 
-/* SCREENS BIGGER THAN 768px (bigger than an mom's tablet) */
+/* SCREENS BIGGER THAN 568px (bigger than an iphone) */
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .subheading h2 {
+    font-size: 5.75em;
+  }
+
+  .pics__row div span:after {
+    font-size: 1.05em;
+  }
+}
+
+/* SCREENS BIGGER THAN 768px (bigger than mom's tablet) */
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
 

@@ -190,7 +190,7 @@ animation: rainbow 6s ease infinite;
 }
 
 .content--block {
-  margin-top: 12em;
+  margin-top: 30vh;
 }
 
 .content--absolute {
@@ -261,6 +261,10 @@ footer a {
 @media screen and (min-width: 35.5em) {
   .page-name {
     font-size: 7em;
+  }
+
+  .content--block {
+    margin-top: 40vh;
   }
 
   .content .container {
