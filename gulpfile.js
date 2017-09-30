@@ -1,15 +1,13 @@
 const fs = require('fs')
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
+const standard = require('gulp-standard')
 
-
-function processCSS(gulp, filenames, fn) {
-
+function processCSS (gulp, filenames, fn) {
   filenames.forEach((filename) => {
-
     filename = './c/src/' + filename
     fs.access(filename, (err) => {
-      if(err) {
+      if (err) {
         throw new ReferenceError('Can\'t find file: "' + filename + '"')
       }
     })
@@ -18,20 +16,19 @@ function processCSS(gulp, filenames, fn) {
   })
 }
 
-
 const srcCSSfiles = ['portfolio.css', 'style.css']
 
 gulp.task('autoprefix', () => {
   processCSS(gulp, srcCSSfiles, (gulp, filename) => {
     gulp.src(filename)
       .pipe(postcss([
-          require('autoprefixer')({ browsers: ['> 1%'] })
-        ]))
+        require('autoprefixer')({ browsers: ['> 1%'] })
+      ]))
       .pipe(gulp.dest('c/dst'))
   })
-});
+})
 
-gulp.task('lint', () => {
+gulp.task('csslint', () => {
   processCSS(gulp, srcCSSfiles, (gulp, filename) => {
     gulp.src(filename)
       .pipe(
@@ -42,8 +39,21 @@ gulp.task('lint', () => {
           )
         ]))
   })
-});
+})
 
-gulp.task('css', ['lint', 'autoprefix']);
+gulp.task('jslint', function () {
+  return gulp.src(['./gulpfile.js'])
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      breakOnError: true,
+      quiet: true
+    }))
+})
 
-gulp.task('default', ['autoprefix']);
+gulp.task('css', ['csslint', 'autoprefix'])
+
+gulp.task('lint', ['csslint', 'jslint'])
+
+gulp.task('all', ['csslint', 'autoprefix', 'jslint'])
+
+gulp.task('default', ['autoprefix'])
