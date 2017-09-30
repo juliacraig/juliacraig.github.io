@@ -19,9 +19,13 @@
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-responsive": "^2.8.0",
     "gulp-standard": "^10.1.1",
+    "picturefill": "^3.0.2",
     "postcss-reporter": "^5.0.0",
+    "sharp": "^0.18.4",
     "stylelint": "^8.1.1"
   }
 }
