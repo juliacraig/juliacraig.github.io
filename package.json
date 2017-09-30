@@ -1,0 +1,26 @@
+{
+  "name": "juliacraig.github.io",
+  "version": "1.0.0",
+  "description": "website for julia craig and her art",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliacraig/juliacraig.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juliacraig/juliacraig.github.io/issues"
+  },
+  "homepage": "https://github.com/juliacraig/juliacraig.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "postcss-reporter": "^5.0.0",
+    "stylelint": "^8.1.1"
+  }
+}
