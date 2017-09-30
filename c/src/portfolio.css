@@ -1,0 +1,114 @@
+
+html, body {
+
+  background-color: #0C2E38;
+}
+
+.portfolio-page .content {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.subheading {
+  text-align: right;
+  border-bottom: 4px solid white;
+  margin-bottom: 3em;
+}
+
+.subheading h2 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: -.3em;
+}
+
+/*
+Source: https://paulund.co.uk/create-polaroid-image-with-css
+*/
+.pics__row:last-child {
+  margin-bottom: 2em;
+}
+
+.pics__row div span {
+  font-family: 'Source Code Pro', monospace;
+  text-align: right;
+  line-height: .8;
+
+  background-color: transparent;
+  display: inline;
+  float: left;
+  padding-bottom: .75em;
+  z-index: 0;
+  position: relative;
+}
+
+.pics__row div span:after {
+  color: white;
+  font-size: .85em;
+  content: attr(title);
+  position: relative;
+  top: .5em;
+}
+
+.pics__row div span {
+  margin-left: .5em;
+  margin-right: .5em;
+  margin-bottom: 3em;
+}
+
+.pics__row div span img {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+/* SCREENS BIGGER THAN 568px (bigger than an iphone) */
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+  .subheading h2 {
+    font-size: 5.75em;
+  }
+
+  .pics__row div span:after {
+    font-size: 1.05em;
+  }
+}
+
+/* SCREENS BIGGER THAN 768px (bigger than mom's tablet) */
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .subheading {
+    margin-bottom: 2em;
+  }
+
+  .pics__row {
+    margin-bottom: 2em;
+  }
+
+  .pics__row:last-child {
+    margin-bottom: 6em;
+  }
+
+  .pics__row div span {
+    margin-bottom: 0;
+  }
+
+  .pics__row div:nth-child(1) span {
+    margin-left: 0;
+    margin-right: 1em;
+  }
+
+  .pics__row div:nth-child(2) span {
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+
+  .pics__row div:nth-child(3) span {
+    margin-left: 1em;
+    margin-right: 0;
+  }
+
+  .content .container {
+    width: 45%;
+  }
+
+}

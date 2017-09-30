@@ -1,9 +1,8 @@
 
 html, body {
 
-    background-color: #0C2E38;
+  background-color: #0C2E38;
 }
-
 
 .portfolio-page .content {
   width: 80%;
@@ -39,8 +38,8 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
   display: inline;
   float: left;
   padding-bottom: .75em;
-  z-index:0;
-  position:relative;
+  z-index: 0;
+  position: relative;
 }
 
 .pics__row div span:after {
@@ -77,9 +76,8 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
 /* SCREENS BIGGER THAN 768px (bigger than mom's tablet) */
 /* ≥ 768px */
 @media screen and (min-width: 48em) {
-
   .subheading {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
   }
 
   .pics__row {

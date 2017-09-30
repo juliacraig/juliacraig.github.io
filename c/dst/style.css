@@ -1,11 +1,12 @@
-﻿/* top-level rules */
 
+/* top-level rules */
 * { box-sizing: border-box }
 
 html, body {
   margin: 0;
   height: 100%;
   font-family: 'Source Code Pro', monospace;
+
   /* default */
   background-color: lightgrey;
   color: white;
@@ -61,27 +62,34 @@ a:focus {
   position: absolute;
   top: 49%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 /* PULSING BACKGROUND COLOUR */
 .pulse {
-background: linear-gradient(124deg, #FF0000, #D43B1D, #E8B71D);
-background-size: 100% 1800%;
+  background: linear-gradient(124deg, #FF0000, #D43B1D, #E8B71D);
+  background-size: 100% 1800%;
 
--webkit-animation: rainbow 6s ease infinite;
-animation: rainbow 6s ease infinite;
+  -webkit-animation: rainbow 6s ease infinite;
+
+          animation: rainbow 6s ease infinite;
 }
 
 @-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% { background-position: 0% 82% }
+
+  50% { background-position: 100% 19% }
+
+  100% { background-position: 0% 82% }
 }
+
 @keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% { background-position: 0% 82% }
+
+  50% { background-position: 100% 19% }
+
+  100% { background-position: 0% 82% }
 }
 
 /*
@@ -142,13 +150,16 @@ animation: rainbow 6s ease infinite;
 
   /* THE COLOUR OF THE BIG PAGE TITLES */
   color: #FFFFFF;
+
   /* THE COLOUR OF THE TEXT SHADOW */
   text-shadow: .04em .04em 0 hotpink;
 }
 
 .page-name--top {
+
   /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
-  transform: translateY(-44%);
+  -webkit-transform: translateY(-44%);
+          transform: translateY(-44%);
 }
 
 .page-name--top span,
@@ -156,8 +167,10 @@ animation: rainbow 6s ease infinite;
   position: absolute;
   left: 50%;
   top: 0;
+
   /* THE AMOUNT OF THE TOP WORD TO CUT OFF */
-  transform: translateX(-50%) translateY(-44%);
+  -webkit-transform: translateX(-50%) translateY(-44%);
+          transform: translateX(-50%) translateY(-44%);
 }
 
 .page-name--top a {
@@ -177,10 +190,11 @@ animation: rainbow 6s ease infinite;
 .page-name--bottom {
   position: fixed;
   bottom: 0;
-
   left: 50%;
+
   /* translateY: THE AMOUNT OF THE BOTTOM WORD TO CUT OFF */
-  transform: translateX(-50%) translateY(35%);
+  -webkit-transform: translateX(-50%) translateY(35%);
+          transform: translateX(-50%) translateY(35%);
 }
 
 /* content */
@@ -228,6 +242,7 @@ footer a {
 /* page-specific styles */
 
 .index-page {
+
   /* THE BACKGROUND COLOR OF THE HOME PAGE */
   background-color: #14647F;
 }
@@ -237,6 +252,7 @@ footer a {
 }
 
 .contact-page {
+
   /* THE BACKGROUND COLOR OF THE CONTACT PAGE */
   background-color: #61CEF4;
 }
@@ -248,11 +264,13 @@ footer a {
 /* ≥ 568px */
 @media screen and (max-width: 35.5em) and (orientation: landscape) {
   .page-name--top {
-    transform: translateY(-65%);
+    -webkit-transform: translateY(-65%);
+            transform: translateY(-65%);
   }
 
   .page-name--bottom {
-    transform: translateY(60%);
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
   }
 }
 
@@ -296,8 +314,3 @@ footer a {
     font-size: 10em;
   }
 }
-
-/* SCREENS BIGGER THAN 1280px (really super high definition monitors) */
-/* 1280px */
-@media screen and (min-width: 80em) {}
-
