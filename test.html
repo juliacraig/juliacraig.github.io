@@ -122,8 +122,8 @@
         <h2>Recent 2</h2>
       </div>
 
-      <!-- first row of images -->
-      <div class="pure-g pics__row my-gallery">
+      <!-- gallery of images -->
+      <div class="pure-g pics__row my-gallery-1">
 
           <figure class="pure-u-1 pure-u-md-1-3">
             <a href="i/dst/lion-lg.jpg" data-size="1240x1240">
@@ -140,7 +140,6 @@
 
           <figure class="pure-u-1 pure-u-md-1-3">
             <a href="i/dst/french-lg.jpg" data-size="1240x1240">
-              <!-- try with src and see whats up -->
             <img
               class="pure-img"
               srcset="i/dst/french-sm.jpg 480w,
@@ -153,7 +152,6 @@
 
           <figure class="pure-u-1 pure-u-md-1-3">
             <a href="i/dst/tiger-lg.jpg" data-size="1240x1240">
-              <!-- try with src and see whats up -->
             <img
               class="pure-img"
               srcset="i/dst/tiger-sm.jpg 480w,
@@ -164,9 +162,47 @@
             <figcaption>Tiger in Snow</figcaption>
           </figure>
 
-      </div><!-- end of .pure-g (end of the row)-->
+          <figure class="pure-u-1 pure-u-md-1-3">
+            <a href="i/dst/french-lg.jpg" data-size="1240x1240">
+            <img
+              class="pure-img"
+              srcset="i/dst/french-sm.jpg 480w,
+                      i/dst/french-md.jpg 768w,
+                      i/dst/french-lg.jpg 1240w"
+              alt="Coeur de Pirate, comparison photo and drawing">
+            </a>
+            <figcaption>Coeur de Pirate</figcaption>
+          </figure>
 
-    </div><!-- end of year (Recent) -->
+
+          <figure class="pure-u-1 pure-u-md-1-3">
+            <a href="i/dst/tiger-lg.jpg" data-size="1240x1240">
+            <img
+              class="pure-img"
+              srcset="i/dst/tiger-sm.jpg 480w,
+                      i/dst/tiger-md.jpg 768w,
+                      i/dst/tiger-lg.jpg 1240w"
+              alt="Tiger">
+            </a>
+            <figcaption>Tiger in Snow</figcaption>
+          </figure>
+
+          <figure class="pure-u-1 pure-u-md-1-3">
+            <a href="i/dst/lion-lg.jpg" data-size="1240x1240">
+              <img
+              class="pure-img"
+              srcset="i/dst/lion-sm.jpg 480w,
+                      i/dst/lion-md.jpg 768w,
+                      i/dst/lion-lg.jpg 1240w"
+
+              alt="Pointilism Lion">
+            </a>
+            <figcaption>Pointilism Lion</figcaption>
+          </figure>
+
+      </div><!-- end of .pure-g (end of the gallery)-->
+
+    </div><!-- end of year (Recent 2) -->
 
     </div><!-- end of .content -->
 
@@ -242,43 +278,6 @@
     </div>
 
 </div>
-  <button id="btn">Open PhotoSwipe</button>
-
-
-  <!--script>
-    var openPhotoSwipe = function() {
-      var pswpElement = document.querySelectorAll('.pswp')[0];
-
-      // build items array
-      var items = [
-          {
-              src: 'i/dst/lion-lg.jpg',
-              w: 1240,
-              h: 1240,
-              title: 'this is a lion'
-          },
-          {
-              src: 'i/dst/french-lg.jpg',
-              w: 1240,
-              h: 1240
-          }
-      ];
-
-      // define options (if needed)
-      var options = {
-          // optionName: 'option value'
-          // for example:
-          index: 0 // start at first slide
-      };
-
-      // Initializes and opens PhotoSwipe
-      var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-      gallery.init();
-    }
-
-    document.getElementById('btn').onclick = openPhotoSwipe;
-
-  </script-->
 
   <script>
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -485,7 +484,7 @@
 };
 
 // execute above function
-initPhotoSwipeFromDOM('.my-gallery');
+initPhotoSwipeFromDOM('.my-gallery-1');
 
   </script>
 
