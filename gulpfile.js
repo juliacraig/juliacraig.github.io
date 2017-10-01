@@ -2,11 +2,11 @@ const fs = require('fs')
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
 const standard = require('gulp-standard')
-const $ = require('gulp-load-plugins')();
+const $ = require('gulp-load-plugins')()
 
 function processCSS (gulp, filenames, fn) {
   filenames.forEach((filename) => {
-    filename = './c/src/' + filename
+    filename = 'c/src/' + filename
     fs.access(filename, (err) => {
       if (err) {
         throw new ReferenceError('Can\'t find file: "' + filename + '"')
@@ -43,7 +43,7 @@ gulp.task('csslint', () => {
 })
 
 gulp.task('jslint', function () {
-  return gulp.src(['./gulpfile.js'])
+  return gulp.src(['gulpfile.js'])
     .pipe(standard())
     .pipe(standard.reporter('default', {
       breakOnError: true,
@@ -60,23 +60,23 @@ gulp.task('img', function () {
         width: 480,
         rename: {
           suffix: '-sm',
-          extname: '.jpg',
-        },
+          extname: '.jpg'
+        }
       }, {
         // image-md.jpg is 768 pixels wide
         width: 768,
         rename: {
           suffix: '-md',
-          extname: '.jpg',
-        },
+          extname: '.jpg'
+        }
       }, {
         // image-lg.jpg is 768 pixels wide
         width: 1240,
         rename: {
           suffix: '-lg',
-          extname: '.jpg',
-        },
-      }],
+          extname: '.jpg'
+        }
+      }]
     }))
     .pipe(gulp.dest('i/dst'));
 });
