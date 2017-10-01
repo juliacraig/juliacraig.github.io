@@ -1,5 +1,7 @@
 const fs = require('fs')
+const del = require('del')
 const gulp = require('gulp')
+const concat = require('gulp-concat')
 const postcss = require('gulp-postcss')
 const standard = require('gulp-standard')
 const $ = require('gulp-load-plugins')()
@@ -78,13 +80,29 @@ gulp.task('img', function () {
         }
       }]
     }))
-    .pipe(gulp.dest('i/dst'));
-});
+    .pipe(gulp.dest('i/dst'))
+})
+
+gulp.task('jsclean', function () {
+  return del([
+    'j/dst/**/*'
+  ])
+})
+
+gulp.task('jscopy', function () {
+  return gulp.src([
+    'node_modules/picturefill/dist/picturefill.js'
+  ])
+  .pipe(concat('script.js'))
+  .pipe(gulp.dest('j/dst/'))
+})
 
 gulp.task('css', ['csslint', 'autoprefix'])
 
 gulp.task('lint', ['csslint', 'jslint'])
 
+gulp.task('js', ['jslint', 'jsclean', 'jscopy'])
+
 gulp.task('all', ['csslint', 'autoprefix', 'jslint', 'img'])
 
-gulp.task('default', ['autoprefix', 'img'])
+gulp.task('default', ['autoprefix', 'img', 'js'])
