@@ -1,0 +1,142 @@
+
+html, body {
+
+  background-color: #0C2E38;
+}
+
+.portfolio-page .content {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.subheading {
+  text-align: right;
+  border-bottom: 3px solid white;
+  margin-bottom: 3em;
+}
+
+.subheading h2 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: -.3em;
+}
+
+.pics__row {
+  margin-left: -14px;
+  margin-right: -14px;
+}
+
+/*
+Source: https://paulund.co.uk/create-polaroid-image-with-css
+*/
+.pics__row figure {
+  text-align: right;
+  line-height: .8;
+
+  background-color: transparent;
+  display: inline;
+  float: left;
+  padding-bottom: .75em;
+  z-index: 0;
+  position: relative;
+}
+
+.pics__row figure figcaption {
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  font-size: .85em;
+  position: relative;
+  top: -75px;
+  margin-right: 10px;
+  padding: 10px 10px 3px;
+
+  font-size: 2.05em;
+  width: 80%;
+  float: left;
+
+      border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+          border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+/*.pics__row figure a:hover + figcaption {
+  text-decoration: line-through;
+}*/
+
+.pics__row figure {
+
+  margin: 0;
+  margin-bottom: 0;
+  /* padding: 1em; */
+}
+
+.pics__row figure img {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  position: relative;
+}
+
+.pics__row figure a {
+  position: relative;
+}
+
+.pics__row figure a::after {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(12, 46, 56, 0.25);
+}
+
+.pics__row figure a:active {
+    border: 3px solid pink;
+}
+
+.pics__row figure a:hover::after {
+    background-color: transparent;
+}
+
+.pics__row figure a:hover + figcaption {
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 5px solid rgba(12, 46, 56, 1);
+    border-bottom: 5px solid rgba(12, 46, 56, 1);
+
+    background-color: rgba(12, 46, 56, 0.5);
+}
+
+/* SCREENS BIGGER THAN 568px (bigger than an iphone) */
+/* ≥ 568px */
+@media screen and (min-width: 35.5em) {
+
+  .portfolio-page .content {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .subheading h2 {
+    font-size: 5.75em;
+  }
+}
+
+/* SCREENS BIGGER THAN 768px (bigger than mom's tablet) */
+/* ≥ 768px */
+@media screen and (min-width: 48em) {
+  .subheading {
+    margin-bottom: 2em;
+  }
+
+  .pics__row {
+    margin-bottom: 2em;
+  }
+
+  .pics__row:last-child {
+    margin-bottom: 6em;
+  }
+}

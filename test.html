@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/pure@0.6.2(base-min.css+grids-min.css+grids-responsive-min.css)">
 
   <link rel="stylesheet" href="c/dst/style.css">
-  <link rel="stylesheet" href="c/dst/portfolio.css">
+  <link rel="stylesheet" href="c/src/test.css">
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -70,56 +70,10 @@
     </header>
 
     <div class="content content--full-width content--block">
-  <!-- 2016 - Present -->
-
-      <div class="year">
-        <div class="subheading">
-          <h2>Recent</h2>
-        </div>
-
-        <!-- first row of images -->
-        <div class="pure-g pics__row">
-
-          <div class="pure-u-1 pure-u-md-1-3">
-            <span title="Pointilism Lion">
-              <img
-                class="pure-img"
-                srcset="i/dst/lion-sm.jpg 480w,
-                        i/dst/lion-md.jpg 768w,
-                        i/dst/lion-lg.jpg 1240w"
-                alt="Pointilism Lion">
-              </span>
-          </div>
-
-          <div class="pure-u-1 pure-u-md-1-3">
-            <span title="Coeur de Pirate">
-              <img
-                class="pure-img"
-                srcset="i/dst/french-sm.jpg 480w,
-                        i/dst/french-md.jpg 768w,
-                        i/dst/french-lg.jpg 1240w"
-                alt="Coeur de Pirate, comparison photo and drawing">
-            </span>
-          </div>
-
-          <div class="pure-u-1 pure-u-md-1-3">
-            <span title="Tiger in Snow">
-              <img
-                class="pure-img"
-                srcset="i/dst/tiger-sm.jpg 480w,
-                        i/dst/tiger-md.jpg 768w,
-                        i/dst/tiger-lg.jpg 1240w"
-                alt="Tiger">
-            </span>
-          </div>
-
-        </div><!-- end of .pure-g (end of the row)-->
-
-    </div><!-- end of year (Recent) -->
 
     <div class="year">
       <div class="subheading">
-        <h2>Recent 2</h2>
+        <h2>Recent</h2>
       </div>
 
       <!-- gallery of images -->
@@ -420,18 +374,9 @@
 
         // define options (if needed)
         options = {
-
+            showHideOpacity: false,
             // define gallery index (for URL)
-            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-            getThumbBoundsFn: function(index) {
-                // See Options -> getThumbBoundsFn section of documentation for more info
-                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect();
-
-                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-            }
+            galleryUID: galleryElement.getAttribute('data-pswp-uid')
 
         };
 
