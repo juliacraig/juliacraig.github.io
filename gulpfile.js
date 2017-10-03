@@ -3,7 +3,9 @@ const concat = require('gulp-concat')
 const del = require('del')
 const fs = require('fs')
 const gulp = require('gulp')
+const inject = require('gulp-inject')
 const postcss = require('gulp-postcss')
+const sizeOf = require('image-size')
 const standard = require('gulp-standard')
 
 /* CSS
@@ -109,14 +111,9 @@ gulp.task('img', function () {
 /* HTML
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-var inject = require('gulp-inject');
-
-var sizeOf = require('image-size');
-var dimensions;
-// var dimensions = sizeOf('images/funny-cats.png');
-// console.log(dimensions.width, dimensions.height);
-
 gulp.task('inject', function () {
+
+  let dimensions = null;
 
   const altText = {
     'batman': 'Batman',
@@ -136,6 +133,8 @@ gulp.task('inject', function () {
             'srcset="i/dst/' + baseFilename +'-sm.jpg 480w, ' +
                     'i/dst/' + baseFilename +'-md.jpg 960w, ' +
                     'i/dst/' + baseFilename +'-lg.jpg 1920w" ' +
+            'sizes="100vw" ' +
+            'src="' + 'i/dst/' + baseFilename +'-md.jpg' + '" ' +
             'alt="' + altText + '" >\n' +
           '<span class="overlay"></span>\n' +
           '<span class="caption">' + altText + '</span>\n' +
