@@ -27,9 +27,6 @@ html, body {
   margin-right: -14px;
 }
 
-/*
-Source: https://paulund.co.uk/create-polaroid-image-with-css
-*/
 .pics__row figure {
   text-align: right;
   line-height: .8;
@@ -72,8 +69,6 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
 }
 
 .pics__row figure img {
-/*  border-top: 3px solid white;
-  border-bottom: 3px solid white;*/
   border: 3px solid transparent;
   position: relative;
 }
@@ -101,15 +96,6 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
 .pics__row figure a:hover .overlay {
     background-color: transparent;
 }
-
-/*.pics__row figure a:hover + figcaption {
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    border-left: 5px solid rgba(12, 46, 56, 1);
-    border-bottom: 5px solid rgba(12, 46, 56, 1);
-
-    background-color: rgba(12, 46, 56, 0.5);
-}*/
 
 /* SCREENS BIGGER THAN 568px (bigger than an iphone) */
 /* ≥ 568px */
