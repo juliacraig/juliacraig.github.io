@@ -22,7 +22,7 @@ function processCSS (gulp, filenames, fn) {
   })
 }
 
-const srcCSSfiles = ['portfolio.css', 'style.css']
+const srcCSSfiles = ['portfolio.css', 'style.css', 'test.css']
 
 gulp.task('autoprefix', () => {
   processCSS(gulp, srcCSSfiles, (gulp, filename) => {
@@ -106,8 +106,74 @@ gulp.task('img', function () {
     .pipe(gulp.dest('i/dst'))
 })
 
+/* HTML
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+var inject = require('gulp-inject');
+
+var sizeOf = require('image-size');
+var dimensions;
+// var dimensions = sizeOf('images/funny-cats.png');
+// console.log(dimensions.width, dimensions.height);
+
+gulp.task('inject', function () {
+
+  const altText = {
+    'batman': 'Batman',
+    'hugh': 'Wolverine',
+    'iron': 'Iron Man',
+    'ben': 'Ben Howard',
+    'thth': 'The Head and the Heart',
+    'watson': 'Patrick Watson'
+  }
+
+  function imgTemplate(baseFilename, w, h, altText) {
+    return '' +
+      '<figure class="pure-u-1 pure-u-md-1-3">\n' +
+        '<a href="i/dst/' + baseFilename + '-lg.jpg" data-size="' + w + 'x' + h + '">\n' +
+          '<img ' +
+            'class="pure-img" ' +
+            'srcset="i/dst/' + baseFilename +'-sm.jpg 480w, ' +
+                    'i/dst/' + baseFilename +'-md.jpg 960w, ' +
+                    'i/dst/' + baseFilename +'-lg.jpg 1920w" ' +
+            'alt="' + altText + '" >\n' +
+          '<span class="overlay"></span>\n' +
+          '<span class="caption">' + altText + '</span>\n' +
+        '</a>\n' +
+        '<figcaption class="visually-hidden">' + altText + '</figcaption>\n' +
+      '</figure>\n'
+  }
+
+gulp.src('./test.html')
+  .pipe(inject(
+    gulp.src(['./i/dst/*.jpg'], {read: false}), {
+      transform: function (filepath) {
+        if (filepath.slice(-7) !== '-lg.jpg') {
+          return;
+        }
+
+        // filepath: "/i/dist/octo-lg.jpg" -> ['i', 'src', 'octo']
+        const filepathArray = filepath.slice(1, -7).split('/')
+        // ['i', 'src', 'octo'] -> 'octo'
+        const baseFilename = filepathArray[filepathArray.length-1]
+
+        if (altText[baseFilename] === undefined) {
+          return;
+        }
+
+        const lgDimensions = sizeOf(filepath.slice(1))
+
+        return imgTemplate(baseFilename, lgDimensions.width, lgDimensions.height, altText[baseFilename]);
+
+      }
+    }
+  ))
+  .pipe(gulp.dest('./'));
+});
+
 /* TASKS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 
 gulp.task('css', ['csslint', 'autoprefix'])
 
