@@ -88,15 +88,15 @@ gulp.task('img', function () {
           extname: '.jpg'
         }
       }, {
-        // image-md.jpg is 768 pixels wide
-        width: 768,
+        // image-md.jpg is 960 pixels wide
+        width: 960,
         rename: {
           suffix: '-md',
           extname: '.jpg'
         }
       }, {
-        // image-lg.jpg is 768 pixels wide
-        width: 1240,
+        // image-lg.jpg is 1920 pixels wide
+        width: 1920,
         rename: {
           suffix: '-lg',
           extname: '.jpg'
