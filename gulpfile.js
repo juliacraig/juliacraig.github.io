@@ -112,9 +112,6 @@ gulp.task('img', function () {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 gulp.task('inject', function () {
-
-  let dimensions = null;
-
   const altText = {
     'batman': 'Batman',
     'hugh': 'Wolverine',
@@ -124,17 +121,17 @@ gulp.task('inject', function () {
     'watson': 'Patrick Watson'
   }
 
-  function imgTemplate(baseFilename, w, h, altText) {
+  function imgTemplate (baseFilename, w, h, altText) {
     return '' +
       '<figure class="pure-u-1 pure-u-md-1-3">\n' +
         '<a href="i/dst/' + baseFilename + '-lg.jpg" data-size="' + w + 'x' + h + '">\n' +
           '<img ' +
             'class="pure-img" ' +
-            'srcset="i/dst/' + baseFilename +'-sm.jpg 480w, ' +
-                    'i/dst/' + baseFilename +'-md.jpg 960w, ' +
-                    'i/dst/' + baseFilename +'-lg.jpg 1920w" ' +
+            'srcset="i/dst/' + baseFilename + '-sm.jpg 480w, ' +
+                    'i/dst/' + baseFilename + '-md.jpg 960w, ' +
+                    'i/dst/' + baseFilename + '-lg.jpg 1920w" ' +
             'sizes="100vw" ' +
-            'src="' + 'i/dst/' + baseFilename +'-md.jpg' + '" ' +
+            'src="' + 'i/dst/' + baseFilename + '-md.jpg' + '" ' +
             'alt="' + altText + '" >\n' +
           '<span class="overlay"></span>\n' +
           '<span class="caption">' + altText + '</span>\n' +
@@ -143,36 +140,34 @@ gulp.task('inject', function () {
       '</figure>\n'
   }
 
-gulp.src('./test.html')
-  .pipe(inject(
-    gulp.src(['./i/dst/*.jpg'], {read: false}), {
-      transform: function (filepath) {
-        if (filepath.slice(-7) !== '-lg.jpg') {
-          return;
+  gulp.src('./test.html')
+    .pipe(inject(
+      gulp.src(['./i/dst/*.jpg'], {read: false}), {
+        transform: function (filepath) {
+          if (filepath.slice(-7) !== '-lg.jpg') {
+            return
+          }
+
+          // filepath: "/i/dist/octo-lg.jpg" -> ['i', 'src', 'octo']
+          let filepathArray = filepath.slice(1, -7).split('/')
+          // ['i', 'src', 'octo'] -> 'octo'
+          let baseFilename = filepathArray[filepathArray.length - 1]
+
+          if (altText[baseFilename] === undefined) {
+            return
+          }
+
+          let lgDimensions = sizeOf(filepath.slice(1))
+
+          return imgTemplate(baseFilename, lgDimensions.width, lgDimensions.height, altText[baseFilename])
         }
-
-        // filepath: "/i/dist/octo-lg.jpg" -> ['i', 'src', 'octo']
-        const filepathArray = filepath.slice(1, -7).split('/')
-        // ['i', 'src', 'octo'] -> 'octo'
-        const baseFilename = filepathArray[filepathArray.length-1]
-
-        if (altText[baseFilename] === undefined) {
-          return;
-        }
-
-        const lgDimensions = sizeOf(filepath.slice(1))
-
-        return imgTemplate(baseFilename, lgDimensions.width, lgDimensions.height, altText[baseFilename]);
-
       }
-    }
-  ))
-  .pipe(gulp.dest('./'));
-});
+    ))
+    .pipe(gulp.dest('./'))
+})
 
 /* TASKS
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 
 gulp.task('css', ['csslint', 'autoprefix'])
 
