@@ -140,9 +140,9 @@ gulp.task('inject', function () {
       '</figure>\n'
   }
 
-  gulp.src('./test.html')
+  gulp.src('test.html')
     .pipe(inject(
-      gulp.src(['./i/dst/*.jpg'], {read: false}), {
+      gulp.src(['i/dst/*.jpg'], {read: false}), {
         transform: function (filepath) {
           if (filepath.slice(-7) !== '-lg.jpg') {
             return
@@ -163,7 +163,7 @@ gulp.task('inject', function () {
         }
       }
     ))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('.'))
 })
 
 /* TASKS
@@ -175,6 +175,8 @@ gulp.task('lint', ['csslint', 'jslint'])
 
 gulp.task('js', ['jslint', 'jsclean', 'jscopy'])
 
-gulp.task('all', ['csslint', 'autoprefix', 'jslint', 'img'])
+gulp.task('html', ['inject'])
 
-gulp.task('default', ['autoprefix', 'img', 'js'])
+gulp.task('all', ['css', 'js', 'img', 'html'])
+
+gulp.task('default', ['autoprefix', 'img', 'jsclean', 'jscopy', 'html'])
