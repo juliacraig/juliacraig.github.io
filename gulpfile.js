@@ -32,7 +32,7 @@ gulp.task('autoprefix', () => {
       .pipe(postcss([
         require('autoprefixer')({ browsers: ['> 1%'] })
       ]))
-      .pipe(gulp.dest('c/dst'))
+      .pipe(gulp.dest('c/dist'))
   })
 })
 
@@ -63,7 +63,7 @@ gulp.task('jslint', function () {
 
 gulp.task('jsclean', function () {
   return del([
-    'j/dst/**/*'
+    'j/dist/**/*'
   ])
 })
 
@@ -72,7 +72,7 @@ gulp.task('jscopy', function () {
     'node_modules/picturefill/dist/picturefill.js'
   ])
   .pipe(concat('script.js'))
-  .pipe(gulp.dest('j/dst/'))
+  .pipe(gulp.dest('j/dist/'))
 })
 
 /* IMAGES
@@ -105,7 +105,7 @@ gulp.task('img', function () {
         }
       }]
     }))
-    .pipe(gulp.dest('i/dst'))
+    .pipe(gulp.dest('i/dist'))
 })
 
 /* HTML
@@ -124,14 +124,14 @@ gulp.task('inject', function () {
   function imgTemplate (baseFilename, w, h, altText) {
     return '' +
       '<figure class="pure-u-1 pure-u-md-1-3">\n' +
-        '<a href="i/dst/' + baseFilename + '-lg.jpg" data-size="' + w + 'x' + h + '">\n' +
+        '<a href="i/dist/' + baseFilename + '-lg.jpg" data-size="' + w + 'x' + h + '">\n' +
           '<img ' +
             'class="pure-img" ' +
-            'srcset="i/dst/' + baseFilename + '-sm.jpg 480w, ' +
-                    'i/dst/' + baseFilename + '-md.jpg 960w, ' +
-                    'i/dst/' + baseFilename + '-lg.jpg 1920w" ' +
+            'srcset="i/dist/' + baseFilename + '-sm.jpg 480w, ' +
+                    'i/dist/' + baseFilename + '-md.jpg 960w, ' +
+                    'i/dist/' + baseFilename + '-lg.jpg 1920w" ' +
             'sizes="100vw" ' +
-            'src="' + 'i/dst/' + baseFilename + '-md.jpg' + '" ' +
+            'src="' + 'i/dist/' + baseFilename + '-md.jpg' + '" ' +
             'alt="' + altText + '" >\n' +
           '<span class="overlay"></span>\n' +
           '<span class="caption">' + altText + '</span>\n' +
@@ -142,7 +142,7 @@ gulp.task('inject', function () {
 
   gulp.src('test.html')
     .pipe(inject(
-      gulp.src(['i/dst/*.jpg'], {read: false}), {
+      gulp.src(['i/dist/*.jpg'], {read: false}), {
         transform: function (filepath) {
           if (filepath.slice(-7) !== '-lg.jpg') {
             return
