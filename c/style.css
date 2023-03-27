@@ -5,7 +5,9 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+
   /* default */
   background-color: lightgrey;
   color: white;
@@ -135,7 +137,7 @@ animation: rainbow 6s ease infinite;
 
   /* THE SIZE OF THE BIG PAGE TITLES */
   font-size: 4em;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 
   text-transform: uppercase;
@@ -229,7 +231,7 @@ footer a {
 
 .index-page {
   /* THE BACKGROUND COLOR OF THE HOME PAGE */
-  background-color: #14647F;
+  background-color: #76B887;
 }
 
 .index-page .page-name--top:hover {
@@ -238,7 +240,7 @@ footer a {
 
 .contact-page {
   /* THE BACKGROUND COLOR OF THE CONTACT PAGE */
-  background-color: #61CEF4;
+  background-color: #7CB2C2;
 }
 
 /* media queries */
