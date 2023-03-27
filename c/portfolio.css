@@ -103,6 +103,7 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 35vh;
   }
 
   .subheading h2 {
