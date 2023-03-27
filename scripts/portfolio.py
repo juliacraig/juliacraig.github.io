@@ -37,7 +37,7 @@ sections = [
         "imgs": [
             'Ducklings-2018.jpg',
             'Coeur-de-Pirate-2016.jpg', 'Tiger-in-snow-2016.jpg', 'Trapped-2016.jpg',
-            'Ben-Howard-2015.jpg', 'Batman-2015.jpg', 'Hear-me-roar-2015.jpg', 'Iron-Man-2015.jpg', 'Jägermeister-2015.jpg', 'Mads-Mikkelsen-2015.jpg', 'Patrick-Watson-2015.jpg', 'Pointilism-Lion-2015.jpg', 'The-Head-and-the-Heart-2015.jpg', 'Wolverine-2015.jpg',
+            'Ben-Howard-2015.jpg', 'Batman-2015.jpg', 'Hear-me-roar-2015.jpg', 'Iron-Man-2015.jpg', 'Jagermeister-2015.jpg', 'Mads-Mikkelsen-2015.jpg', 'Patrick-Watson-2015.jpg', 'Pointilism-Lion-2015.jpg', 'The-Head-and-the-Heart-2015.jpg', 'Wolverine-2015.jpg',
             'Breaking-Bad-2014.jpg', 'Wiz-Khalifa-2014.jpg',
             'Leonardo-Dicaprio-2013.jpg'
         ]
