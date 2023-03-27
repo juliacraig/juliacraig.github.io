@@ -41,6 +41,23 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
   gap: 1em;
 }
 
+.pics__row a {
+  font-size: 1em;
+  color: #333;
+  text-decoration: none;
+}
+
+.pics__row a:hover, 
+.pics__row a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.pics__row a:hover img, 
+.pics__row a:focus img {
+  opacity: .8;
+}
+
 .pics__row figure {
   text-align: left;
 }
@@ -54,7 +71,7 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
   border: 4px solid white;
   border-top: none;
   background: white;
-  
+
   color: #333;
   font-size: .85em;
   position: relative;

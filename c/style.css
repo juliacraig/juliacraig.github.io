@@ -26,7 +26,8 @@ p, a, span {
   margin: 0;
 }
 
-a {
+body:not(.portfolio-page) a,
+body.portfolio-page footer a {
   display: inline-block;
   width: 100%;
   text-decoration: none;
@@ -273,7 +274,7 @@ footer a {
     width: 75%;
   }
 
-  .content a {
+  body:not(.portfolio-page) .content a {
     width: 31%;
     margin: 0 1%;
   }
