@@ -8,15 +8,17 @@ figure {
 }
 
 .portfolio-page .content {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  margin-top: 25vh;
 }
 
 .subheading {
   text-align: left;
   border-bottom: 4px solid white;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .subheading h2 {
@@ -32,12 +34,12 @@ figure {
 Source: https://paulund.co.uk/create-polaroid-image-with-css
 */
 .pics__row:last-child {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .pics__row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1em;
 }
 
@@ -97,6 +99,12 @@ Source: https://paulund.co.uk/create-polaroid-image-with-css
 /* SCREENS BIGGER THAN 568px (bigger than an iphone) */
 /* ≥ 568px */
 @media screen and (min-width: 35.5em) {
+  .portfolio-page .content {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
   .subheading h2 {
     font-size: 5.75em;
   }

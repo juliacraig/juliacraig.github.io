@@ -15,6 +15,7 @@ html, body {
 
 body {
   text-align: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -256,6 +257,14 @@ footer a {
 
   .page-name--bottom {
     transform: translateY(60%);
+  }
+}
+
+/* SCREENS SMALLER THAN 400px (bigger than an iphone) */
+/* < 400px */
+@media screen and (max-width: 25em) {
+  .portfolio-page .page-name {
+    font-size: 3.3em;
   }
 }
 
