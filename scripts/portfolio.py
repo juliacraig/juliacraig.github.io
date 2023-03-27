@@ -10,7 +10,7 @@
 sections = [
     {
         "name": 'Featured',
-        "imgs": ['McCurry-2023.jpg', 'Girma,-Ethiopian-farmer-2022.jpg', 'Eduardo-2021.jpg', 'The-Green-Knight-2021.jpg',]
+        "imgs": ['McCurry-2023.jpg', 'The-Green-Knight-2022.jpg', 'Eduardo-2021.jpg', 'Girma,-Ethiopian-farmer-2021.jpg']
     },
     {
         "name": 'Commissioned',
