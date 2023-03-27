@@ -1,7 +1,6 @@
 # from os import listdir
 
-# This file loops through a folder of images
-# and gets a list of all of them
+# This file loops through a folder of images and gets a list of all of them
 # directory = './i'
 
 # files = [f for f in listdir(directory) if f.endswith(".jpg")]
@@ -10,29 +9,38 @@
 
 sections = [
     {
-        "name": 'Recent',
-        "imgs": ['McCurry-2023.jpg', 'Daniele-Comboni-2023.jpg', 'Spot-2022.jpg']
+        "name": 'Featured',
+        "imgs": ['McCurry-2023.jpg', 'Girma,-Ethiopian-farmer-2022.jpg', 'Eduardo-2021.jpg', 'The-Green-Knight-2021.jpg',]
     },
     {
-        "name": 'Digital',
+        "name": 'Commissioned',
         "imgs": [
-            'Rex-2023.jpg',
-            'Chans-Lab-2022.jpg',
-            'Adam-and-Eve-2021.jpg', 'Eduardo-2021.jpg', 'Friends-2021.jpg', 'Hiking-Trip-2-2021.jpg', 'The-Green-Knight-2021.jpg',
-            'Hyena-1-2020.jpg', 'Hyena-2-2020.jpg', 'Hyena-3-2020.jpg', 'Hyena-4-2020.jpg', 'Joe-and-Jill-2020.jpg', 'Jumping-Spider-2020.jpg', 'Leon-2020.jpg', 'Little-Women-2020.jpg', 'Sam-and-Sue-2020.jpg',
-            'Sketch-2019.jpg', 'Sketch-2-2019.jpg', 'V-for-Vendetta-2019.jpg',
-            'Farmhouse-2017.jpg',
-            'Javier-Bardem-2016.jpg']
+            'Bowser-2023.jpg',
+            'Daniel-Comboni-2023.jpg',
+            'CHANS-Lab-2022.jpg',
+            'Louis-2022.jpg',
+            'Cat-and-family-2021.jpg', 'For-Ilke-2021.jpg', 'Hiking-buddies-2021.jpg',
+            'Philippe-and-Catarina-2020.jpg'
+        ]
     },
     {
-        "name": 'Posters',
-        "imgs": ['Mads-Mikkelsen-2018.jpg', 'Jägermeister-2018.jpg', 'Tiger-in-snow-2018.jpg', 'Batman-2018.jpg', 'Wolverine-2018.jpg', 'Iron-Man-2018.jpg',
-                 'Ben-Howard-2018.jpg', 'The-Head-and-the-Heart-2018.jpg', 'Patrick-Watson-2018.jpg']
+        "name": 'For fun',
+        "imgs": [
+            'Hyena-1-2020.jpg', 'Hyena-2-2020.jpg', 'Hyena-3-2020.jpg', 'Hyena-4-2020.jpg', 'Joe-and-Laurie-2020.jpg', 'Leon-2020.jpg',
+            'Little-Women-2019.jpg', 'Sketch-2019.jpg', 'Sketch-2-2019.jpg', 'V-for-Vendetta-2019.jpg',
+            'Peacock-Jumping-Spider-2017.jpg', 'Seiser-Alm-2017.jpg',
+            'Javier-Bardem-2016.jpg'
+        ]
     },
     {
-        "name": 'Black and White',
-        "imgs": ['Pointilism-Lion-2018.jpg', 'Coeur-de-Pirate-2018.jpg', 'Leonardo-Dicaprio-2018.jpg', 'Hear-me-roar-2018.jpg', 'Trapped-2018.jpg',
-                 'Ducklings-2018.jpg', 'Breaking-Bad-2018.jpg', 'Wiz-Khalifa-2018.jpg']
+        "name": 'Earlier works',
+        "imgs": [
+            'Ducklings-2018.jpg',
+            'Coeur-de-Pirate-2016.jpg', 'Tiger-in-snow-2016.jpg', 'Trapped-2016.jpg',
+            'Ben-Howard-2015.jpg', 'Batman-2015.jpg', 'Hear-me-roar-2015.jpg', 'Iron-Man-2015.jpg', 'Jägermeister-2015.jpg', 'Mads-Mikkelsen-2015.jpg', 'Patrick-Watson-2015.jpg', 'Pointilism-Lion-2015.jpg', 'The-Head-and-the-Heart-2015.jpg', 'Wolverine-2015.jpg',
+            'Breaking-Bad-2014.jpg', 'Wiz-Khalifa-2014.jpg',
+            'Leonardo-Dicaprio-2013.jpg'
+        ]
     }
 ]
 
